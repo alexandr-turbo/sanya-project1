@@ -1,1 +1,12 @@
-# 1-project
+### Setup ###
+
+cd src
+
+npm install
+
+gulp
+
+
+## magic ##
+
+
