@@ -14,7 +14,12 @@ var paths = {
     dest: 'assets/scripts/'
   },
   html: {
-    index: './index.html'
+    src: 'src/index.html',
+    dest: 'assets/'
+  },
+  images: {
+    src: 'src/img/**.*',
+    dest: 'assets/img/'
   }
 };
  
@@ -37,7 +42,7 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './'
+      baseDir: './assets/'
     }
   });
   done();
@@ -48,13 +53,23 @@ function serve(done) {
  */
 function styles() {
   return gulp.src(paths.styles.src)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(paths.styles.dest));
+}
+
+function copyHTML() {
+  return gulp.src(paths.html.src)
+    .pipe(gulp.dest(paths.html.dest));
+}
+
+function copyImages() {
+  return gulp.src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest));
 }
  
 function watch() {
-  gulp.watch(paths.styles.src, gulp.parallel([styles, reload]));
-  gulp.watch(paths.html.index, reload);
+  gulp.watch(paths.styles.src, gulp.parallel([styles, reload, copyHTML]));
+  gulp.watch(paths.html.src, gulp.parallel([copyHTML, reload]));
 }
  
 /*
@@ -67,7 +82,7 @@ exports.watch = watch;
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.series(clean, serve, gulp.parallel([styles, watch]));
+var build = gulp.series(clean, copyHTML, copyImages, serve, gulp.parallel([styles, watch]));
  
 /*
  * You can still use `gulp.task` to expose tasks
