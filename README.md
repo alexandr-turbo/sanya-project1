@@ -1,8 +1,8 @@
-### Setup ###
+### Установка зависимостей проекта после скачивания ###
 
 npm install
 
-## Start project ##
+## Запуск проекта ##
 
 gulp
 
@@ -26,13 +26,23 @@ http://i.imgur.com/HdycPDz.png
 git add .
 git commit -m "коментарий к изменениям"
 git push --set-upstream origin name-of-branch
+http://i.imgur.com/eSxdYCh.png
 
-Если уже писали строку git push --set-upstream origin имя-созданной-ветки в этой ветке:
+Если уже писали строку "git push --set-upstream origin имя-созданной-ветки" в этой ветке:
 1) пишем код, верстаем, стилизуем.. и т.п
 2) добавляем изменения в ветку 
 команды в терминале:
 git add .
 git commit -m "коментарий к изменениям"
 git push
+http://i.imgur.com/eqxg99q.png
 
-###  ###
+### Запрос на слияние изменений в ветку master ###
+1) переходим на нашу ветку 
+http://i.imgur.com/CxtiRrh.png
+2) жмакаем на кнопку Pull request
+http://i.imgur.com/CKJpgLH.png
+3) проверяем, что сливаем именно нашу ветку в master и нажимаем Сreate pull request
+http://i.imgur.com/NfjOA6u.png
+4) пишем мне, что отправили Pull request
+5) после того как я подтвержу слияние - навая инфа появится в ветке master 
