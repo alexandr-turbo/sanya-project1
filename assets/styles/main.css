@@ -452,41 +452,49 @@ th {
 .imgs1 .img1 {
   background-image: url("../img/1.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 200%; }
 
 .imgs1 .img2 {
   background-image: url("../img/2.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 100%; }
 
 .imgs1 .img3 {
   background-image: url("../img/3.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 100%; }
 
 .imgs1 .img4 {
   background-image: url("../img/4.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 100%; }
 
 .imgs2 .img5 {
   background-image: url("../img/5.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 100%; }
 
 .imgs2 .img6 {
   background-image: url("../img/6.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 100%; }
 
 .imgs2 .img7 {
   background-image: url("../img/7.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 100%; }
 
 .imgs2 .img8 {
   background-image: url("../img/8.jpg");
   background-repeat: no-repeat;
+  height: 256px;
   width: 200%; }
 
 .details {
@@ -495,7 +503,8 @@ th {
   align-items: center;
   opacity: 0;
   font-size: 20pt;
-  color: #fff; }
+  color: #fff;
+  height: 100%; }
 
 .details:hover {
   opacity: 1;
