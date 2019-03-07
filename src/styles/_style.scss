@@ -19,15 +19,18 @@
 		flex-wrap: wrap;
 	}
 }
-.header__menu__list {
+.header__menu__list { /* тут пытался, но что-то не так работает
+или расположено, поэтому пока сделал так */
   	padding: 20px 10px;
 }
-.header__menu__list a {
+.header__menu__list a { /* тут пытался, но что-то не так работает
+или расположено, поэтому пока сделал так */
 	text-decoration: none;
 	font-weight: bold;
 	color: #ffffff;
 }
-.header__menu__list a:hover {
+.header__menu__list a:hover { /* тут пытался, но что-то не так работает
+	или расположено, поэтому пока сделал так */
   	color: rgb(106, 175, 255);
  }
 .mac {
@@ -66,7 +69,8 @@
 	justify-content: space-between;
 	align-items: center;
 
-	.features-item {
+	.features-item { /* это слишком глубоко, но мне нужно послушать про вложенность.
+		раскрой тему вложенности, пожалуйста. */
 	&__image {
 	margin: 25px 0 25px 0;
 	display:block;
@@ -85,7 +89,7 @@
 	color: rgb(89, 99, 105);
 	}
 }
-.features__item:hover .features-item__image{
+.features__item:hover .features-item__image{ /* тоже глубоко */
 	border-radius: 20px;
 	background-color: rgb(94, 191, 255);
 }
@@ -123,7 +127,7 @@
 	}
 }
 &__first-line{
-	.image1,
+	.image1, /* и опять глубоко */
 	.image2,
 	.image3,
 	.image4 {
@@ -264,7 +268,7 @@
 	}
 }
 
-&__pairs {
+&__pairs { /* и опять */
 	.pair {
 		&__img2,
 		&__img3,
@@ -328,7 +332,7 @@
 		flex-wrap: wrap;
 	}
 }
-.tablet,
+.tablet, /* тут проблем быть не должно, но проблема придумать название*/
 .awesome {
 	display: flex;
 	justify-content: center;
@@ -375,7 +379,7 @@
 		width: 190px;
 	}
 }
-.number-texts {
+.number-texts { /* тоже глубоко + названия */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -427,7 +431,8 @@ font: 36px sans-serif;
 		flex-wrap: wrap;
 	}
 }
-.about-us,
+.about-us, /* тут не пробовал даже, хотя проблем быть не должно.
+зачастую, проблемы однотипные...*/
 .get-in-touch,
 .social-media {
 	display: flex;
@@ -467,7 +472,7 @@ font: 36px sans-serif;
 	justify-content: right; 
 	align-items: center;
 }   
-.social-media-header {
+.social-media-header { /* а вот этот блок от меня прячется...*/
 	font: 36px sans-serif;
 	color: rgb(0, 0, 0);
 }
