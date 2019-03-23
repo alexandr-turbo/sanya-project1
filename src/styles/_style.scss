@@ -11,29 +11,30 @@
 	@media screen and (max-width: 768px)  {
 		flex-direction: column;
 	}
-}
-.header__menu * {
+	&__menu {
 	display: flex;
 	list-style: none;
 	@media screen and (max-width: 768px)  {
 		flex-wrap: wrap;
 	}
+	}
 }
-.header__menu__list { /* тут пытался, но что-то не так работает
-или расположено, поэтому пока сделал так */
-  	padding: 20px 10px;
+.menu {
+	&__list-item {
+			padding: 20px 10px;
+	}
+	&__link {
+		text-decoration: none;
+		font-weight: bold;
+		color: #ffffff;
+	}
+	&__link:hover {
+		color: rgb(106, 175, 255);
+	}
 }
-.header__menu__list a { /* тут пытался, но что-то не так работает
-или расположено, поэтому пока сделал так */
-	text-decoration: none;
-	font-weight: bold;
-	color: #ffffff;
-}
-.header__menu__list a:hover { /* тут пытался, но что-то не так работает
-	или расположено, поэтому пока сделал так */
-  	color: rgb(106, 175, 255);
- }
-.mac {
+.section {}
+
+.section-title {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -51,7 +52,8 @@
 		background-color:rgba(0,0,0,.4);
 		}
 }
-.features {
+
+.section-features {
 	display: flex;
 	padding: 0 100px;
 	justify-content: space-around;
@@ -63,41 +65,41 @@
 		padding: 0 25px;
 	}
 
-&__item {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		}
+		&__image {
+		margin: 25px 0 25px 0;
+		display:block;
+		height: 100px;
+		width: 100px;
+		}
+		&__text {
+		margin: 0 0 25px 0;
+		font: 18px sans-serif;
+		color: rgb(0, 0, 0);
+		}  
+		&__description {
+		padding: 0 20px;	
+		width: 200px;
+		text-align: center;
+		color: rgb(89, 99, 105);
+		}
 
-	.features-item { /* это слишком глубоко, но мне нужно послушать про вложенность.
-		раскрой тему вложенности, пожалуйста. */
-	&__image {
-	margin: 25px 0 25px 0;
-	display:block;
-	height: 100px;
-	width: 100px;
-	}
-	&__text {
-	margin: 0 0 25px 0;
-	font: 18px sans-serif;
-	color: rgb(0, 0, 0);
-	}  
-	&__description {
-	padding: 0 20px;	
-	width: 200px;
-	text-align: center;
-	color: rgb(89, 99, 105);
+	&__item:hover {
+		.section-features__image {
+		border-radius: 20px;
+		background-color: rgb(94, 191, 255);
+		}
+		.section-features__text {
+		color: rgb(94, 191, 255);
+		}
 	}
 }
-.features__item:hover .features-item__image{ /* тоже глубоко */
-	border-radius: 20px;
-	background-color: rgb(94, 191, 255);
-}
-.features__item:hover .features-item__text{
-  	color: rgb(94, 191, 255);
-}
-}
-}
+
 
 .description {
 	display: flex;
@@ -434,7 +436,7 @@ font: 36px sans-serif;
 .about-us, /* тут не пробовал даже, хотя проблем быть не должно.
 зачастую, проблемы однотипные...*/
 .get-in-touch,
-.social-media {
+.social_media {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -472,7 +474,7 @@ font: 36px sans-serif;
 	justify-content: right; 
 	align-items: center;
 }   
-.social-media-header { /* а вот этот блок от меня прячется...*/
+.social-media-header { 
 	font: 36px sans-serif;
 	color: rgb(0, 0, 0);
 }
