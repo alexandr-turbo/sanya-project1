@@ -90,14 +90,12 @@
 		}
 
 	&__item:hover {
-		.section-features {
-			&__image {
-			border-radius: 20px;
-			background-color: rgb(94, 191, 255);
-			}
-			&__text {
-			color: rgb(94, 191, 255);
-			}
+		.section-features__image {
+		border-radius: 20px;
+		background-color: rgb(94, 191, 255);
+		}
+		.section-features__text {
+		color: rgb(94, 191, 255);
 		}
 	}
 }
