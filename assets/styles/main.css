@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -378,14 +379,20 @@ th {
       flex-wrap: wrap; } }
 
 .header__menu__list {
+  /* тут пытался, но что-то не так работает
+или расположено, поэтому пока сделал так */
   padding: 20px 10px; }
 
 .header__menu__list a {
+  /* тут пытался, но что-то не так работает
+или расположено, поэтому пока сделал так */
   text-decoration: none;
   font-weight: bold;
   color: #ffffff; }
 
 .header__menu__list a:hover {
+  /* тут пытался, но что-то не так работает
+	или расположено, поэтому пока сделал так */
   color: #6aafff; }
 
 .mac {
@@ -420,21 +427,25 @@ th {
     flex-direction: column;
     justify-content: space-between;
     align-items: center; }
-    .features__item .features-item__image {
-      margin: 25px 0 25px 0;
-      display: block;
-      height: 100px;
-      width: 100px; }
-    .features__item .features-item__text {
-      margin: 0 0 25px 0;
-      font: 18px sans-serif;
-      color: black; }
-    .features__item .features-item__description {
-      padding: 0 20px;
-      width: 200px;
-      text-align: center;
-      color: #596369; }
+    .features__item .features-item {
+      /* это слишком глубоко, но мне нужно послушать про вложенность.
+		раскрой тему вложенности, пожалуйста. */ }
+      .features__item .features-item__image {
+        margin: 25px 0 25px 0;
+        display: block;
+        height: 100px;
+        width: 100px; }
+      .features__item .features-item__text {
+        margin: 0 0 25px 0;
+        font: 18px sans-serif;
+        color: black; }
+      .features__item .features-item__description {
+        padding: 0 20px;
+        width: 200px;
+        text-align: center;
+        color: #596369; }
     .features__item .features__item:hover .features-item__image {
+      /* тоже глубоко */
       border-radius: 20px;
       background-color: #5ebfff; }
     .features__item .features__item:hover .features-item__text {
@@ -607,44 +618,46 @@ th {
     @media screen and (max-width: 768px) {
       .imgs3__pairs {
         flex-wrap: wrap; } }
-  .imgs3__pairs .pair__img2, .imgs3__pairs .pair__img3, .imgs3__pairs .pair__img4, .imgs3__pairs .pair__img5 {
-    background-size: 100px 100px;
-    border-radius: 50px;
-    width: 100px;
-    height: 100px;
-    margin: 50px 25px; }
-  .imgs3__pairs .pair__img2 {
-    background-image: url("../img/2.jpg"); }
-  .imgs3__pairs .pair__img3 {
-    background-image: url("../img/3.jpg"); }
-  .imgs3__pairs .pair__img4 {
-    background-image: url("../img/4.jpg"); }
-  .imgs3__pairs .pair__img5 {
-    background-image: url("../img/5.jpg"); }
-  .imgs3__pairs .pair__img2 .text4,
-  .imgs3__pairs .pair__img3 .text5,
-  .imgs3__pairs .pair__img4 .text6,
-  .imgs3__pairs .pair__img5 .text7 {
-    margin: 25px;
-    text-align: center; }
-  .imgs3__pairs .pair__img2 .details,
-  .imgs3__pairs .pair__img3 .details,
-  .imgs3__pairs .pair__img4 .details,
-  .imgs3__pairs .pair__img5 .details {
-    display: flex;
-    justify-content: center;
-    border-radius: 50px;
-    align-items: center;
-    opacity: 0;
-    font-size: 20px;
-    color: #fff;
-    height: 100%; }
-  .imgs3__pairs .pair__img2 .details:hover,
-  .imgs3__pairs .pair__img3 .details:hover,
-  .imgs3__pairs .pair__img4 .details:hover,
-  .imgs3__pairs .pair__img5 .details:hover {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.5); }
+  .imgs3__pairs {
+    /* и опять */ }
+    .imgs3__pairs .pair__img2, .imgs3__pairs .pair__img3, .imgs3__pairs .pair__img4, .imgs3__pairs .pair__img5 {
+      background-size: 100px 100px;
+      border-radius: 50px;
+      width: 100px;
+      height: 100px;
+      margin: 50px 25px; }
+    .imgs3__pairs .pair__img2 {
+      background-image: url("../img/2.jpg"); }
+    .imgs3__pairs .pair__img3 {
+      background-image: url("../img/3.jpg"); }
+    .imgs3__pairs .pair__img4 {
+      background-image: url("../img/4.jpg"); }
+    .imgs3__pairs .pair__img5 {
+      background-image: url("../img/5.jpg"); }
+    .imgs3__pairs .pair__img2 .text4,
+    .imgs3__pairs .pair__img3 .text5,
+    .imgs3__pairs .pair__img4 .text6,
+    .imgs3__pairs .pair__img5 .text7 {
+      margin: 25px;
+      text-align: center; }
+    .imgs3__pairs .pair__img2 .details,
+    .imgs3__pairs .pair__img3 .details,
+    .imgs3__pairs .pair__img4 .details,
+    .imgs3__pairs .pair__img5 .details {
+      display: flex;
+      justify-content: center;
+      border-radius: 50px;
+      align-items: center;
+      opacity: 0;
+      font-size: 20px;
+      color: #fff;
+      height: 100%; }
+    .imgs3__pairs .pair__img2 .details:hover,
+    .imgs3__pairs .pair__img3 .details:hover,
+    .imgs3__pairs .pair__img4 .details:hover,
+    .imgs3__pairs .pair__img5 .details:hover {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.5); }
 
 .background1 {
   display: flex;
@@ -704,6 +717,7 @@ th {
       width: 190px; } }
 
 .number-texts {
+  /* тоже глубоко + названия */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -789,6 +803,7 @@ th {
   align-items: center; }
 
 .social-media-header {
+  /* а вот этот блок от меня прячется...*/
   font: 36px sans-serif;
   color: black; }
 
