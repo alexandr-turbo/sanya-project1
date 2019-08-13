@@ -7,19 +7,19 @@ const server = browserSync.create();
 var paths = {
   styles: {
     src: 'src/styles/**/*.scss',
-    dest: 'assets/styles/'
+    dest: 'docs/styles/'
   },
   scripts: {
     src: 'src/scripts/**/*.js',
-    dest: 'assets/scripts/'
+    dest: 'docs/scripts/'
   },
   html: {
     src: 'src/index.html',
-    dest: 'assets/'
+    dest: 'docs/'
   },
   images: {
     src: 'src/img/**.*',
-    dest: 'assets/img/'
+    dest: 'docs/img/'
   }
 };
  
@@ -30,7 +30,7 @@ var paths = {
 function clean() {
   // You can use multiple globbing patterns as you would with `gulp.src`,
   // for example if you are using del 2.0 or above, return its promise
-  return del([ 'assets' ]);
+  return del([ 'docs' ]);
 }
 
 function reload(done) {
@@ -42,7 +42,7 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './assets/'
+      baseDir: './docs/'
     }
   });
   done();
