@@ -16,7 +16,7 @@
     "gulp-util": "^3.0.8"
   },
   "dependencies": {
-    "ajv": "^6.10.2",
+    "ajv": "^6.12.3",
     "node-sass": "^4.11.0"
   }
 }
